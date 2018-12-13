@@ -1,0 +1,41 @@
+{
+  "id": "file:/v1/comments/create.json#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "attributes"
+      ],
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object",
+          "required": [
+            "body",
+            "image"
+          ],
+          "properties": {
+            "body": {
+              "type": "string"
+            },
+            "image": {
+              "type": ["string", "null"]
+            }
+          }
+        }
+      }
+    }
+  }
+}
