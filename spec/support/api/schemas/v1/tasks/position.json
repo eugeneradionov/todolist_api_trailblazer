@@ -1,0 +1,71 @@
+{
+  "id": "file:/v1/tasks/position.json#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "attributes"
+      ],
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object",
+          "required": [
+            "position"
+          ],
+          "properties": {
+            "position": {
+              "type": "integer"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "comments"
+          ],
+          "properties": {
+            "comments": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "type"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

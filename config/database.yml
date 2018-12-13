@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: todolist_api_trailblazer_development
+
+test:
+  <<: *default
+  database: todolist_api_trailblazer_test
+
+production:
+  <<: *default
+  database: todolist_api_trailblazer_production

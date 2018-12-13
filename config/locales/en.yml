@@ -1,0 +1,6 @@
+en:
+  errors:
+    access_denied: Access Denied
+    not_found: Record Not Found
+    password_validation: Password must be at contain at least one number, one capital letter and has length at least 8 characters
+    something_went_wrong: Oops, something went wrong :(
