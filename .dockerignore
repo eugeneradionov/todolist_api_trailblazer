@@ -1,0 +1,11 @@
+.git
+.env
+.rspec
+
+log/*
+tmp/*
+spec/*
+
+README.md
+Dockerfile
+.docker-compose.yml

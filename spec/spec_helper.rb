@@ -31,7 +31,6 @@ RSpec.configure do |config|
 
   config.include Warden::Test::Helpers
   config.include Devise::Test::ControllerHelpers, type: :controller
-  config.filter_run show_in_doc: true if ENV['APIPIE_RECORD']
 
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)

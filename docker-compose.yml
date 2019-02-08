@@ -1,0 +1,23 @@
+version: '3'
+services:
+  db:
+    image: postgres:9
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+    volumes:
+      - ./tmp/db_storage:/var/lib/postgresql
+  rails:
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_HOST: "db"
+      RAILS_ENV: "production"
+      HOST: "localhost"
+      PORT: 3000
+    build: .
+    volumes:
+      - .:/todolist-trailbazer
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
